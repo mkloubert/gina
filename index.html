@@ -4,71 +4,70 @@
   <head>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, user-scalable=no" />
-      <title>Gina - Home</title>
+      <title>Photo album - Home</title>
       <link rel="stylesheet" href="public/lightgallery/css/lightgallery.css" />
-      <link rel="stylesheet" href="public/videojs/video-js.min.css" />
       <link rel="stylesheet" href="public/lightgallery/css/lg-exif.min.css" />
+      <link rel="stylesheet" href="public/videojs/video-js.min.css" />
       <link rel="stylesheet" href="public/core.css" />
       <link rel="stylesheet" href="public/theme.css" />
   </head>
 
   <body>
 
+    <header>
+      <a href="index.html">
+        <h1>Photo album</h1>
+      </a>
+    </header>
     
-    <div id="container">
+    <!--
+      Breadcrumbs of parent albums
+    -->
     
-      <!--
-        Gallery title
-      -->
-      <header>
-        <h1><a href="index.html">Gina</a></h1>
-      </header>
+    <!--
+      Nested albums
+    -->
+    <ul id="galleries">
+     <li>
+       <a href="images.html">
+         <h3>images</h3>
+         <div class="meta">
+           249 photos<br />
+           23 Dec 2009 - 01 Jun 2022
+         </div>
+         <ul class="grid"><li><img src="media/thumbs/images/IMAG0001.jpg" /></li><li><img src="media/thumbs/images/IMAG0002.jpg" /></li><li><img src="media/thumbs/images/IMAG0001%20(2).jpg.jpg" /></li><li><img src="media/thumbs/images/IMAG0004.jpg" /></li>     </ul>
+       </a>
+     </li>
+     <li>
+       <a href="videos.html">
+         <h3>videos</h3>
+         <div class="meta">
+           10 videos<br />
+           30 Apr 2020 - 21 Oct 2021
+         </div>
+         <ul class="grid"><li><img src="media/thumbs/videos/IMG_0763.jpg" /></li><li><img src="media/thumbs/videos/IMG_0791.jpg" /></li><li><img src="media/thumbs/videos/IMG_0792.jpg" /></li><li><img src="media/thumbs/videos/IMG_0794.jpg" /></li>     </ul>
+       </a>
+     </li>
+    </ul>
     
-      <!--
-        Breadcrumbs of parent albums
-      -->
-      <nav class="breadcrumbs">
-    <a class="breadcrumb-item" href="index.html">Home</a>
-      </nav>
+    <!--
+      Render all thumbnails
+    -->
+    <ul id="media">
+    </ul>
     
-      <!--
-        Nested albums, if any
-      -->
-      <div id="albums">
-    <a href="images.html" style="background-image: url('media/small/images/IMAG0001.jpg')">
-            <div class="info">
-              <h3>images</h3>
-              <div class="summary">217 photos</div>
-              <div class="date">23 Dec 2009 - 30 May 2022</div>
-            </div>
-          </a><a href="videos.html" style="background-image: url('media/small/videos/IMG_0763.jpg')">
-            <div class="info">
-              <h3>videos</h3>
-              <div class="summary">10 videos</div>
-              <div class="date">30 Apr 2020 - 21 Oct 2021</div>
-            </div>
-          </a>  </div>
+    <!--
+      Pagination
+    -->
     
-      <!--
-        All photos and videos
-      -->
-      <ul id="media" class="clearfix">
-      </ul>
-    
-      <!--
-        Pagination
-      -->
-    
-      <!--
-        Zip file link
-      -->
+    <!--
+      Zip file link
+    -->
     
     
-      <!--
-        Optional footer
-      -->
-    
-    </div>
+    <!--
+      Optional footer
+    -->
     <!-- Video loader -->
     <div id="videos">
     </div>

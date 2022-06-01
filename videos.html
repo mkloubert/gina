@@ -4,216 +4,210 @@
   <head>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, user-scalable=no" />
-      <title>Gina - videos</title>
+      <title>Photo album - videos</title>
       <link rel="stylesheet" href="public/lightgallery/css/lightgallery.css" />
-      <link rel="stylesheet" href="public/videojs/video-js.min.css" />
       <link rel="stylesheet" href="public/lightgallery/css/lg-exif.min.css" />
+      <link rel="stylesheet" href="public/videojs/video-js.min.css" />
       <link rel="stylesheet" href="public/core.css" />
       <link rel="stylesheet" href="public/theme.css" />
   </head>
 
   <body>
 
+    <header>
+      <a href="index.html">
+        <h1>Photo album</h1>
+      </a>
+    </header>
     
-    <div id="container">
-    
-      <!--
-        Gallery title
-      -->
-      <header>
-        <h1><a href="index.html">Gina</a></h1>
-      </header>
-    
-      <!--
-        Breadcrumbs of parent albums
-      -->
+    <!--
+      Breadcrumbs of parent albums
+    -->
       <nav class="breadcrumbs">
-    <a class="breadcrumb-item" href="index.html">Home</a>&nbsp;/&nbsp;<a class="breadcrumb-item" href="videos.html">videos</a>
+    <a class="breadcrumb-item" href="index.html">Home</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a class="breadcrumb-item" href="videos.html">videos</a>
       </nav>
     
-      <!--
-        Nested albums, if any
-      -->
-      <div id="albums">
-      </div>
+    <!--
+      Nested albums
+    -->
+    <ul id="galleries">
+    </ul>
     
-      <!--
-        All photos and videos
-      -->
-      <ul id="media" class="clearfix">
-          
-            <li data-html="#media120"
-                data-download-url="media/large/videos/IMG_0763.mp4">
-              <a href="media/large/videos/IMG_0763.mp4">
-                <img src="media/thumbs/videos/IMG_0763.jpg"
-                     width="120"
-                     height="120"
-                     alt="IMG_0763.MOV" />
-              </a>
-              <img class="video-overlay" src="public/play.png" />
-            </li>      
-            <li data-html="#media227"
-                data-download-url="media/large/videos/IMG_0791.mp4">
-              <a href="media/large/videos/IMG_0791.mp4">
-                <img src="media/thumbs/videos/IMG_0791.jpg"
-                     width="120"
-                     height="120"
-                     alt="IMG_0791.MOV" />
-              </a>
-              <img class="video-overlay" src="public/play.png" />
-            </li>      
-            <li data-html="#media226"
-                data-download-url="media/large/videos/IMG_0792.mp4">
-              <a href="media/large/videos/IMG_0792.mp4">
-                <img src="media/thumbs/videos/IMG_0792.jpg"
-                     width="120"
-                     height="120"
-                     alt="IMG_0792.MOV" />
-              </a>
-              <img class="video-overlay" src="public/play.png" />
-            </li>      
-            <li data-html="#media154"
-                data-download-url="media/large/videos/IMG_0794.mp4">
-              <a href="media/large/videos/IMG_0794.mp4">
-                <img src="media/thumbs/videos/IMG_0794.jpg"
-                     width="120"
-                     height="120"
-                     alt="IMG_0794.MOV" />
-              </a>
-              <img class="video-overlay" src="public/play.png" />
-            </li>      
-            <li data-html="#media225"
-                data-download-url="media/large/videos/IMG_0796.mp4">
-              <a href="media/large/videos/IMG_0796.mp4">
-                <img src="media/thumbs/videos/IMG_0796.jpg"
-                     width="120"
-                     height="120"
-                     alt="IMG_0796.MOV" />
-              </a>
-              <img class="video-overlay" src="public/play.png" />
-            </li>      
-            <li data-html="#media155"
-                data-download-url="media/large/videos/IMG_1452.mp4">
-              <a href="media/large/videos/IMG_1452.mp4">
-                <img src="media/thumbs/videos/IMG_1452.jpg"
-                     width="120"
-                     height="120"
-                     alt="IMG_1452.MOV" />
-              </a>
-              <img class="video-overlay" src="public/play.png" />
-            </li>      
-            <li data-html="#media156"
-                data-download-url="media/large/videos/IMG_1510.mp4">
-              <a href="media/large/videos/IMG_1510.mp4">
-                <img src="media/thumbs/videos/IMG_1510.jpg"
-                     width="120"
-                     height="120"
-                     alt="IMG_1510.MOV" />
-              </a>
-              <img class="video-overlay" src="public/play.png" />
-            </li>      
-            <li data-html="#media189"
-                data-download-url="media/large/videos/IMG_1511.mp4">
-              <a href="media/large/videos/IMG_1511.mp4">
-                <img src="media/thumbs/videos/IMG_1511.jpg"
-                     width="120"
-                     height="120"
-                     alt="IMG_1511.MOV" />
-              </a>
-              <img class="video-overlay" src="public/play.png" />
-            </li>      
-            <li data-html="#media190"
-                data-download-url="media/large/videos/IMG_2162.mp4">
-              <a href="media/large/videos/IMG_2162.mp4">
-                <img src="media/thumbs/videos/IMG_2162.jpg"
-                     width="120"
-                     height="120"
-                     alt="IMG_2162.MOV" />
-              </a>
-              <img class="video-overlay" src="public/play.png" />
-            </li>      
-            <li data-html="#media224"
-                data-download-url="media/large/videos/IMG_2168.mp4">
-              <a href="media/large/videos/IMG_2168.mp4">
-                <img src="media/thumbs/videos/IMG_2168.jpg"
-                     width="120"
-                     height="120"
-                     alt="IMG_2168.MOV" />
-              </a>
-              <img class="video-overlay" src="public/play.png" />
-            </li>  </ul>
+    <!--
+      Render all thumbnails
+    -->
+    <ul id="media">
+        
+          <li data-html="#media156"
+              data-download-url="media/large/videos/IMG_0763.mp4">
+            <a href="media/large/videos/IMG_0763.mp4">
+              <img src="media/thumbs/videos/IMG_0763.jpg"
+                   width="120"
+                   height="120"
+                   alt="IMG_0763.MOV" />
+            </a>
+            <img class="video-overlay" src="public/play.png" />
+          </li>    
+          <li data-html="#media157"
+              data-download-url="media/large/videos/IMG_0791.mp4">
+            <a href="media/large/videos/IMG_0791.mp4">
+              <img src="media/thumbs/videos/IMG_0791.jpg"
+                   width="120"
+                   height="120"
+                   alt="IMG_0791.MOV" />
+            </a>
+            <img class="video-overlay" src="public/play.png" />
+          </li>    
+          <li data-html="#media208"
+              data-download-url="media/large/videos/IMG_0792.mp4">
+            <a href="media/large/videos/IMG_0792.mp4">
+              <img src="media/thumbs/videos/IMG_0792.jpg"
+                   width="120"
+                   height="120"
+                   alt="IMG_0792.MOV" />
+            </a>
+            <img class="video-overlay" src="public/play.png" />
+          </li>    
+          <li data-html="#media242"
+              data-download-url="media/large/videos/IMG_0794.mp4">
+            <a href="media/large/videos/IMG_0794.mp4">
+              <img src="media/thumbs/videos/IMG_0794.jpg"
+                   width="120"
+                   height="120"
+                   alt="IMG_0794.MOV" />
+            </a>
+            <img class="video-overlay" src="public/play.png" />
+          </li>    
+          <li data-html="#media158"
+              data-download-url="media/large/videos/IMG_0796.mp4">
+            <a href="media/large/videos/IMG_0796.mp4">
+              <img src="media/thumbs/videos/IMG_0796.jpg"
+                   width="120"
+                   height="120"
+                   alt="IMG_0796.MOV" />
+            </a>
+            <img class="video-overlay" src="public/play.png" />
+          </li>    
+          <li data-html="#media209"
+              data-download-url="media/large/videos/IMG_1452.mp4">
+            <a href="media/large/videos/IMG_1452.mp4">
+              <img src="media/thumbs/videos/IMG_1452.jpg"
+                   width="120"
+                   height="120"
+                   alt="IMG_1452.MOV" />
+            </a>
+            <img class="video-overlay" src="public/play.png" />
+          </li>    
+          <li data-html="#media256"
+              data-download-url="media/large/videos/IMG_1510.mp4">
+            <a href="media/large/videos/IMG_1510.mp4">
+              <img src="media/thumbs/videos/IMG_1510.jpg"
+                   width="120"
+                   height="120"
+                   alt="IMG_1510.MOV" />
+            </a>
+            <img class="video-overlay" src="public/play.png" />
+          </li>    
+          <li data-html="#media210"
+              data-download-url="media/large/videos/IMG_1511.mp4">
+            <a href="media/large/videos/IMG_1511.mp4">
+              <img src="media/thumbs/videos/IMG_1511.jpg"
+                   width="120"
+                   height="120"
+                   alt="IMG_1511.MOV" />
+            </a>
+            <img class="video-overlay" src="public/play.png" />
+          </li>    
+          <li data-html="#media243"
+              data-download-url="media/large/videos/IMG_2162.mp4">
+            <a href="media/large/videos/IMG_2162.mp4">
+              <img src="media/thumbs/videos/IMG_2162.jpg"
+                   width="120"
+                   height="120"
+                   alt="IMG_2162.MOV" />
+            </a>
+            <img class="video-overlay" src="public/play.png" />
+          </li>    
+          <li data-html="#media257"
+              data-download-url="media/large/videos/IMG_2168.mp4">
+            <a href="media/large/videos/IMG_2168.mp4">
+              <img src="media/thumbs/videos/IMG_2168.jpg"
+                   width="120"
+                   height="120"
+                   alt="IMG_2168.MOV" />
+            </a>
+            <img class="video-overlay" src="public/play.png" />
+          </li></ul>
     
-      <!--
-        Pagination
-      -->
+    <!--
+      Pagination
+    -->
     
-      <!--
-        Zip file link
-      -->
+    <!--
+      Zip file link
+    -->
     
     
-      <!--
-        Optional footer
-      -->
-    
-    </div>
+    <!--
+      Optional footer
+    -->
     <!-- Video loader -->
     <div id="videos">
-          <div id="media120" style="display:none;">
+          <div id="media156" style="display:none;">
             <video class="lg-video-object lg-html5 video-js vjs-default-skin vjs-big-play-centered"  poster="media/large/videos/IMG_0763.jpg" preload="none" controls>
               <source src="media/large/videos/IMG_0763.mp4" type="video/mp4" />
               Your browser does not support HTML5 video
             </video>
           </div>
-          <div id="media227" style="display:none;">
+          <div id="media157" style="display:none;">
             <video class="lg-video-object lg-html5 video-js vjs-default-skin vjs-big-play-centered"  poster="media/large/videos/IMG_0791.jpg" preload="none" controls>
               <source src="media/large/videos/IMG_0791.mp4" type="video/mp4" />
               Your browser does not support HTML5 video
             </video>
           </div>
-          <div id="media226" style="display:none;">
+          <div id="media208" style="display:none;">
             <video class="lg-video-object lg-html5 video-js vjs-default-skin vjs-big-play-centered"  poster="media/large/videos/IMG_0792.jpg" preload="none" controls>
               <source src="media/large/videos/IMG_0792.mp4" type="video/mp4" />
               Your browser does not support HTML5 video
             </video>
           </div>
-          <div id="media154" style="display:none;">
+          <div id="media242" style="display:none;">
             <video class="lg-video-object lg-html5 video-js vjs-default-skin vjs-big-play-centered"  poster="media/large/videos/IMG_0794.jpg" preload="none" controls>
               <source src="media/large/videos/IMG_0794.mp4" type="video/mp4" />
               Your browser does not support HTML5 video
             </video>
           </div>
-          <div id="media225" style="display:none;">
+          <div id="media158" style="display:none;">
             <video class="lg-video-object lg-html5 video-js vjs-default-skin vjs-big-play-centered"  poster="media/large/videos/IMG_0796.jpg" preload="none" controls>
               <source src="media/large/videos/IMG_0796.mp4" type="video/mp4" />
               Your browser does not support HTML5 video
             </video>
           </div>
-          <div id="media155" style="display:none;">
+          <div id="media209" style="display:none;">
             <video class="lg-video-object lg-html5 video-js vjs-default-skin vjs-big-play-centered"  poster="media/large/videos/IMG_1452.jpg" preload="none" controls>
               <source src="media/large/videos/IMG_1452.mp4" type="video/mp4" />
               Your browser does not support HTML5 video
             </video>
           </div>
-          <div id="media156" style="display:none;">
+          <div id="media256" style="display:none;">
             <video class="lg-video-object lg-html5 video-js vjs-default-skin vjs-big-play-centered"  poster="media/large/videos/IMG_1510.jpg" preload="none" controls>
               <source src="media/large/videos/IMG_1510.mp4" type="video/mp4" />
               Your browser does not support HTML5 video
             </video>
           </div>
-          <div id="media189" style="display:none;">
+          <div id="media210" style="display:none;">
             <video class="lg-video-object lg-html5 video-js vjs-default-skin vjs-big-play-centered"  poster="media/large/videos/IMG_1511.jpg" preload="none" controls>
               <source src="media/large/videos/IMG_1511.mp4" type="video/mp4" />
               Your browser does not support HTML5 video
             </video>
           </div>
-          <div id="media190" style="display:none;">
+          <div id="media243" style="display:none;">
             <video class="lg-video-object lg-html5 video-js vjs-default-skin vjs-big-play-centered"  poster="media/large/videos/IMG_2162.jpg" preload="none" controls>
               <source src="media/large/videos/IMG_2162.mp4" type="video/mp4" />
               Your browser does not support HTML5 video
             </video>
           </div>
-          <div id="media224" style="display:none;">
+          <div id="media257" style="display:none;">
             <video class="lg-video-object lg-html5 video-js vjs-default-skin vjs-big-play-centered"  poster="media/large/videos/IMG_2168.jpg" preload="none" controls>
               <source src="media/large/videos/IMG_2168.mp4" type="video/mp4" />
               Your browser does not support HTML5 video
